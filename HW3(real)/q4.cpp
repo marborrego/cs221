@@ -4,12 +4,12 @@ using namespace std;
 // This function takes two ints as input and calculates log former base latterint log(int num, int base)
 int log(int num, int base)
 {
-    int result {0};
-    while (num >= base){
-        num /= base;
-        ++ result;
+    int result {0};                                     // sets int variable "result" to 0
+    while (num >= base){                                // while the log number is bigger that the base,
+        num /= base;                                    // divide the number by the base
+        ++ result;                                      // and add to the result counter
     }
-    return result;
+    return result;                                      // returns the result
 }
 
 // This program takes two ints as input and prints log former base latter
