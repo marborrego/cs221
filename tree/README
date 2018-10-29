@@ -6,7 +6,7 @@ Tree.cpp has some cool functions:
 
 - destroy_tree deletes the tree by recursively deleting from the furthest leaves to the root node.
 
-- path_to uses the helper function keyHere to go recursively find out which trees and subtrees hold the key of interest. It crashes if the key is not in the tree.
+- path_to uses the helper function keyHere to recursively find out which trees and subtrees hold the key of interest. It crashes if the key is not in the tree.
 
 - node_at just loops through any string and navigates through the inputed tree based on whether the char is an "L" or "R"
 
