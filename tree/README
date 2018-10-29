@@ -8,9 +8,9 @@ Tree.cpp has some cool functions:
 
 - path_to uses the helper function keyHere to recursively find out which trees and subtrees hold the key of interest. It crashes if the key is not in the tree.
 
-- node_at just loops through any string and navigates through the inputed tree based on whether the char is an "L" or "R". It will (intentionally) crash if any chars other than "L" or "R" is inputed.
+- node_at just loops through any string and navigates through the inputed tree based on whether the char is an "L" or "R". It will return nullptr if any chars other than "L" or "R" is inputed or if the string tries to access nodes that dont extist.
 
-To build a tree:
+To build a tree (use test_tree.cc):
 - Building from the bottom up is the easiest thing
 - create at least one node using create_tree that has inputs of null pointers for left and right
 - Then build towards the root by using previously made nodes as left and right inputs in create_tree
