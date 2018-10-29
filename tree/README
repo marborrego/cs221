@@ -1,0 +1,18 @@
+Welcome to my Tree stuff!
+
+Tree.cpp has some cool functions:
+
+- create_tree makes some space in memory for a tree leaf by simply creating a tree from whatever is inputed and returning a pointer to that tree.
+
+- destroy_tree deletes the tree by recursively deleting from the furthest leaves to the root node.
+
+- path_to uses the helper function keyHere to go recursively find out which trees and subtrees hold the key of interest. It crashes if the key is not in the tree.
+
+- node_at just loops through any string and navigates through the inputed tree based on whether the char is an "L" or "R"
+
+To build a tree:
+- Building from the bottom up is the easiest thing
+- create at least one node using create_tree that has inputs of null pointers for left and right
+- Then build towards the root by using previously made nodes as left and right inputs in create_tree
+
+Once your tree is constructed you can run path_to and node_at on it. Don't forget to destroy_tree when youre done
