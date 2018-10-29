@@ -3,6 +3,8 @@
 #include "tree.hh"
 #include "tree.cpp"
 
+// This file contains main and can be used to build and test trees. Just change any inputs and test out anything.
+
 // Use this to create a tree that you want to test on
 tree_ptr_t create(){
     tree_ptr_t last = create_tree(9, 12, nullptr, nullptr);
@@ -14,7 +16,10 @@ tree_ptr_t create(){
     tree_ptr_t first = create_tree(126, 0, b, e);
     return first;
 }
+
 // destroy_tree tested using valgrind
+
+// A test for path_to.
 void test_path(tree_ptr_t tree){
   if (path_to(tree, 9) != "LRL"){
     std::cout << "Path to failure 1" << path_to(tree, 9) << "\n";
@@ -33,6 +38,7 @@ void test_path(tree_ptr_t tree){
   }
 }
 
+// A test for node_at
 void test_node(tree_ptr_t tree){
   if (node_at(tree, "LRL") != tree->left_->right_->left_){
     std::cout << "Node at Failure 1 \n";
@@ -43,13 +49,17 @@ void test_node(tree_ptr_t tree){
   else if (node_at(tree, "") != tree){
     std::cout << "Node at failure 3 \n";
   }
+  else if (node_at(tree, "LRLRLRLRLR") != nullptr){
+    std::cout << "Node at failure 4 \n";
+  }
   else{
     std::cout << "Node at success \n";
   }
 }
+
+// The main just creates a tree calls the tests
 int main(){
   tree_ptr_t test_tree = create();
   test_path(test_tree);
   test_node(test_tree);
-  test_destroy(test_tree);
 }
