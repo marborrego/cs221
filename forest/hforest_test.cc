@@ -2,6 +2,7 @@
 #include "hforest.cc"
 #include <vector>
 
+// Making of trees and forest
 HTree::tree_ptr_t a(new HTree::HTree(6, 13));
 
 HTree::tree_ptr_t c(new HTree::HTree(12, 17));
@@ -23,6 +24,7 @@ HForest::tree_vec empty = {};
 
 HForest forest(trees);
 
+// Tests the members of HForest using the above trees/forest
 int main(){
   auto s = forest.size();
   std::cout << "Forest size is "<< s << " trees \n";
