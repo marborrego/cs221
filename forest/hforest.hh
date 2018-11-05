@@ -2,14 +2,14 @@
 
 #include <memory>
 #include <vector>
-#include "HTree.hh"
+#include "htree.cc"
 
 class HForest{
 public:
   using forest_ptr_t = std::shared_ptr<const HForest>;
-  using tree_list = std::vector<HTree::tree_ptr_t>;
+  using tree_vec = std::vector<HTree::tree_ptr_t>;
 
-  HForest(tree_list trees);
+  HForest(HForest::tree_vec trees);
 
   ~HForest() = default;
 
@@ -20,5 +20,5 @@ public:
   HTree::tree_ptr_t pop_tree();
 
 private:
-  tree_list trees_;
+  tree_vec trees_;
 };
