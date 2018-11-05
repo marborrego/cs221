@@ -1,0 +1,15 @@
+The design of the HTree is largely based off of the Tree hw.
+The design of the HForest was based on the storage of trees in a vector, as much of the HForest members can be easily written using built in members of std::vector. While I was not able to create a pointer to the forest, the members are still able to be accessed using "."
+
+To initialize an HTree and create a pointer to it, using the following code:
+
+HTree::tree_ptr_t name_pf_tree(new HTree::HTree(key, value, left, right));
+use the following to work with members:
+name_of_tree->name_of_member(inputs);
+
+To initialize an HForest, use the following code:
+
+HForest::tree_vec trees = {pointers, to, ... , HTrees};
+use the following to work with members:
+name_of_forest.name_of_member(inputs);
+
