@@ -3,7 +3,7 @@
 #include <algorithm>
 #include "hforest.hh"
 
-HForest::HForest(tree_list trees)
+HForest::HForest(HForest::tree_vec trees)
   : trees_(trees)
 {
   
@@ -24,7 +24,7 @@ HTree::tree_ptr_t HForest::pop_tree(){
   if (trees_.size() == 0){
     return nullptr;
   }
-  std::make_heap(trees_.begin(), trees_.end(), compare_trees;
+  std::make_heap(trees_.begin(), trees_.end(), compare_trees);
   std::pop_heap(trees_.begin(), trees_.end());
   auto largest = trees_.back();
   trees_.pop_back();
