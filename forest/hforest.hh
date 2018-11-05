@@ -6,7 +6,7 @@
 
 class HForest{
 public:
-  using forest_ptr_t = std::shared_ptr<const HForest>;
+  using forest_ptr_t = std::shared_ptr<HForest>;
   using tree_vec = std::vector<HTree::tree_ptr_t>;
 
   HForest(HForest::tree_vec trees);

@@ -19,28 +19,28 @@ HTree::tree_ptr_t add_this(new HTree::HTree(13, 4));
 
 
 HForest::tree_vec trees = {a, b, c , d, e, first};
+HForest::forest_ptr_t f_ptr(new HForest::HForest(trees));
 HForest::tree_vec empty = {};
+HForest::forest_ptr_t e_ptr = trees;
 
-
-HForest forest(trees);
 
 // Tests the members of HForest using the above trees/forest
 int main(){
-  auto s = forest.size();
+  auto s = f_ptr->size();
   std::cout << "Forest size is "<< s << " trees \n";
-  s = empty.size();
+  s = empty->size();
   std::cout << "Empty forest is " << s << "\n";
 
-  forest.add_tree(add_this);
-  s = forest.size();
+  f_ptr->add_tree(add_this);
+  s = f_ptr->size();
   std::cout << "New size is " << s << "\n";
 
-  auto popped = forest.pop_tree();
+  auto popped = f_ptr->pop_tree();
   std::cout << "Popped has value of " << popped->get_value() << "\n";
 
-  popped = forest.pop_tree();
+  popped = f_ptr->pop_tree();
   std::cout << "Popped has value of " << popped->get_value() << "\n";
 
-  s = forest.size();
+  s = f_ptr->size();
   std::cout << "New size is " << s << "\n";
 }

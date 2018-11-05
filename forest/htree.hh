@@ -21,7 +21,6 @@ class HTree {
         tree_ptr_t right = nullptr);
 
   ~HTree() = default;
-
   int get_key() const;  // Return key in current node
   uint64_t get_value() const;      // Return value in current node
 
