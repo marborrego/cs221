@@ -4,6 +4,7 @@
 #include <vector>
 #include "htree.cc"
 
+// Building a tree to run tests on
 HTree::tree_ptr_t a(new HTree::HTree(6, 13));
 
 HTree::tree_ptr_t c(new HTree::HTree(12, 17));
@@ -16,6 +17,7 @@ HTree::tree_ptr_t e(new HTree::HTree(12, 3, d, nullptr));
 
 HTree::tree_ptr_t first(new HTree::HTree(126, 0, b, e));
 
+// Tests get value
 void test_gv(){
   if (a->get_value() != 13){
     std::cout << "get_value failed \n";
@@ -40,6 +42,7 @@ void test_gv(){
   }
 }
 
+// Tests get_key
 void test_gk(){
   if (a->get_key() != 6){
     std::cout << "get_key failed \n";
@@ -64,6 +67,7 @@ void test_gk(){
   }
 }
 
+// Tests get_child
 void test_gc(){
   if (a->get_child(HTree::Direction::LEFT) != nullptr){
       std::cout << "get_child failed \n";
@@ -106,7 +110,7 @@ void test_gc(){
     }
   }
 
-
+// Main runs tests
 int main(){
   test_gv();
   test_gk();
