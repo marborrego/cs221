@@ -2,6 +2,9 @@
  * A simple class to perform stream I/O on individual bits.
  * Before reading any bits, ensure your input stream still has valid inputs.
  */
+
+// Takes in a compressed binary file and convert to bool (make a )
+// Takes a boolean and converts/writes to bits (loop of 8)
 #include <iostream>
 
 class BitIO {
