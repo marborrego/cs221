@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "htree.hh"
+#include "hforest.hh"
 
 class Huffman {
  public:
@@ -34,4 +35,7 @@ class Huffman {
   // a character symbol or HEOF.
   // Finally, updates the frequency table with this additional symbol.
   int decode(bool bit);
+
+private:
+  HTree::tree_ptr_t forest_build();
 };
