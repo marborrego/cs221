@@ -5,7 +5,7 @@
 
 #include <climits>
 #include <vector>
-
+#include "huffman.hh"
 //#include "htree.hh"
 
 // Maximum number of symbols we need to encode (a symbol fits in a char) + EOF
@@ -14,7 +14,9 @@ static const int HEOF = ALPHABET_SIZE - 1;  // Special symbol to denote end of f
 
 using bits_t = std::vector<bool>;
 
-Huffman()
+Huffman::Huffman(){
+  
+}
 
 // Encode a symbol into a sequence of bits, then update frequency table.
 bits_t encode(int symbol){
