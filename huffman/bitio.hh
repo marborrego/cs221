@@ -29,4 +29,10 @@ class BitIO {
 private:
   std::ostream* os_;
   std::istream* is_;
+  int input_index;
+  int output_index;
+  int output_char;
+  char current_char;
+
+  int get_next_char();
 };
