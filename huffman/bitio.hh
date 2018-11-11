@@ -5,6 +5,8 @@
 
 // Takes in a compressed binary file and convert to bool (make a )
 // Takes a boolean and converts/writes to bits (loop of 8)
+#pragma once
+
 #include <iostream>
 
 class BitIO {
@@ -13,7 +15,7 @@ class BitIO {
   BitIO(std::ostream* os, std::istream* is);
 
   // Flushes out any remaining output bits and trailing zeros, if any:
-  ~BitIO();
+  ~BitIO() = default;
 
   BitIO(const BitIO&) = default;
   BitIO(BitIO&&) = default;
@@ -26,7 +28,7 @@ class BitIO {
   // Read a single bit (or trailing zero)
   bool input_bit();
 
-private:
+ private:
   std::ostream* os_;
   std::istream* is_;
   int input_index;
@@ -34,5 +36,5 @@ private:
   int output_char;
   char current_char;
 
-  int get_next_char();
+  void get_next_char();
 };
