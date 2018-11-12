@@ -15,7 +15,7 @@ class BitIO {
   BitIO(std::ostream* os, std::istream* is);
 
   // Flushes out any remaining output bits and trailing zeros, if any:
-  ~BitIO() = default;
+  ~BitIO();
 
   BitIO(const BitIO&) = default;
   BitIO(BitIO&&) = default;
@@ -33,7 +33,7 @@ class BitIO {
   std::istream* is_;
   int input_index;
   int output_index;
-  int output_char;
+  char output_char;
   char current_char;
 
   void get_next_char();
