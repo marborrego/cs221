@@ -1,1 +1,21 @@
 Marissa Borrego & Sarah Strand
+
+Huffman can be used to compress files based on a Huffman tree algorithm which changes each character into a series of bits whose length is dependent on the character’s frequency in the text. The compressed file is then decoded by rebuilding the Huffman tree.
+
+Our files have been tested and work to properly compress our file, however our decoder fails to properly decompress the file. It decompresses all of the bits properly but continues to loop, not recognizing our eof. We have deduced that this is an error in our tree building method as the eof is holds the value of 255 instead of the expected 256 after our Huffman tree is rebuilt. 
+
+File Name | Raw File Size (bytes) | Compressed File Size (bytes) | Decompressed File Matches
+
+
+Poem1		495 			415				No*
+
+Poem2		470			447				No*
+
+Poem3		422			381				No*
+
+Poem4		806			639				No*
+
+Poem5		580			468				No*
+
+* Decompressed files successfully decompress all of the original text, but add on infinite characters (only using characters that were part of the original text)
+
