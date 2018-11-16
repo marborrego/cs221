@@ -3,6 +3,7 @@
  */
 
 #include "hforest.hh"
+#include "hforest.cc"
 #include <iostream>
 #include <cassert>
 
