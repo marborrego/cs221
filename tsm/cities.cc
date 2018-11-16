@@ -67,7 +67,7 @@ std::istream& operator>> (std::istream& in, Cities& city){
 std::ostream& operator<< (std::ostream& out, Cities& city){
   Cities::cities city_vec = city.get_cities();
   for (Cities::coord_t cord : city_vec){
-    out << "(" << cord.first << "," << cord.second << "),";
+    out << cord.first << "\t" << cord.second << "\n";
   }
   return out;
 }
