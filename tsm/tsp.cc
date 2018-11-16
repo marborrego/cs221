@@ -5,10 +5,8 @@
 #include "cities.hh"
 
 int main(int argc, char *argv[]){
-  std::cout << argc << "\n";
   for (int i = 1; i < argc; i++){                                                    // Allows for multiple files to be read
     std::ifstream infile {argv[i]};
-    std::cout << "made it here 1! \n";
     assert(infile);
     std::ofstream outfile {"shortest.tsv"};
     assert(outfile);
