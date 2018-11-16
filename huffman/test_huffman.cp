@@ -3,6 +3,7 @@
  */
 
 #include "huffman.hh"
+#include "huffman.cc"
 #include <iostream>
 #include <cassert>
 #include <climits>
@@ -15,7 +16,6 @@ void test_encode()
 
   auto bits = huff.encode('a');
   assert(bits.size() > CHAR_BIT);
-
   bits = huff.encode('b');
   assert(bits.size() > CHAR_BIT);
 
