@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <limits.h>
 #include <cassert>
 #include "cities.hh"
 
