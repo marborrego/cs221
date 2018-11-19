@@ -1,0 +1,3 @@
+Marissa Borrego & Sarah Strand
+
+Our implementation of the TSP tries 1,000,000 random paths, computing the distance of each path and comparing it to the current minimum path distance. At the end of the loop, the shortest path found is returned. This does not necessarily find the shortest possible path, in fact it is quite unlikely that the shortest possible path will be found at all with this implementation, especially as the number of cities increases. All elements of our implementation work as expected.
