@@ -10,13 +10,13 @@ Cities::Cities(){
 }
 
 double Cities::distance_calc(Cities::coord_t first, Cities::coord_t second) const {
-  return sqrt(pow((first.first - second.first), 2) + pow((first.second - second.second), 2));
+return sqrt(pow((first.first - second.first), 2) + pow((first.second - second.second), 2));
 }
 
 Cities Cities::reorder(const permutation_t& ordering) const{
   int perm_len = ordering.size();
   Cities new_city;
-  for (int i=0; i<perm_len; i++){
+  for (int i=0; i<perm_len; i++){                         // Creates a new city by 
     new_city.cities_.push_back(cities_[ordering[i]]);
   }
   return new_city;
